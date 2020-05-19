@@ -4,7 +4,7 @@
   "description": "",
   "main": "covid.js",
   "scripts": {
-    "start": "parcel covid.html"
+    "start": "parcel index.html"
   },
   "author": "",
   "license": "ISC",

@@ -116,11 +116,24 @@ function displayIndiaData(data){
     let total = 0;
     let death = 0;
     let recovered = 0;
+    console.log(data)
     for(const val of data){
-        total += val.noOfCases ;
-        death += val.deaths ;
-        recovered += val.cured ;
+        if(typeof(val.noOfCases) === "number"){
+            total += val.noOfCases ;
+        }
+        if(typeof(val.deaths) === "number"){
+            death += val.deaths ;
+        }
+        if(typeof(val.cured) === "number"){
+            recovered += val.cured ;
+        }
     }
+
+    // covidData.India = {
+    //     currentCase: total,
+    //     deaths: death,
+    //     recovered
+    // }
     
     totalEl.textContent = total;
     recoveredEl.textContent = recovered;
@@ -163,6 +176,7 @@ function displayIndiaTimeline(data){
             };
         
     }
+
 
     createOptions()
     // console.log(Object.keys(covidData));

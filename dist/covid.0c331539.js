@@ -22072,12 +22072,26 @@ function displayIndiaData(data) {
   let total = 0;
   let death = 0;
   let recovered = 0;
+  console.log(data);
 
   for (const val of data) {
-    total += val.noOfCases;
-    death += val.deaths;
-    recovered += val.cured;
-  }
+    if (typeof val.noOfCases === "number") {
+      total += val.noOfCases;
+    }
+
+    if (typeof val.deaths === "number") {
+      death += val.deaths;
+    }
+
+    if (typeof val.cured === "number") {
+      recovered += val.cured;
+    }
+  } // covidData.India = {
+  //     currentCase: total,
+  //     deaths: death,
+  //     recovered
+  // }
+
 
   totalEl.textContent = total;
   recoveredEl.textContent = recovered;
@@ -22168,7 +22182,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51363" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51503" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

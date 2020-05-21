@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Covid 19 Tracker</title>
+    <link rel="stylesheet" href="/base.ee376513.css">
+    <style>.wrapper{
+            max-width: 95%;
+        }
+
+        .search {
+        display: grid;
+        grid-template-columns: 1fr;
+        }
+
+        button[disabled] {
+        opacity: 0.2;
+        }
+
+        .recipes {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-gap: 20px;
+        }
+
+        .recipe {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        }
+        
+        .india{
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .data h1{
+            text-align: center;
+            margin-top: 0.5em;
+        }
+
+        .data h4 span{
+            color: aqua;
+        }</style>
+    <script src="/base.ee376513.js"></script></head>
+
+    <body>
+    <div class="wrapper">
+        <form class="search">
+            <label for="state">Show Data By State:</label>
+            <select name="state" id="state">
+                <!-- <option value="India" selected>India (Country)</option> -->
+            </select>
+        </form>
+
+        <div class="data">
+            <h1>Covid19 Cases In <span class="state">India</span></h1>
+            <div class="india">
+                <h4 class="totalCase">Total Cases: <span>loading...</span></h4>
+                <h4 class="recovered">Recovered: <span>loading...</span></h4>
+                <h4 class="death">Death's: <span>loading...</span></h4>
+            </div>
+            <canvas class="timeline"></canvas>
+        </div>
+    </div>
+
+    <script src="/covid.0c331539.js" type="module"></script>
+</body>
+
+</html>

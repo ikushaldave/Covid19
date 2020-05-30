@@ -1,5 +1,7 @@
 # This is My Small Project Created During Lockdown
 
+This my leaning period for git & js 
+
 Project Live at <url>https://covid19indiastat.herokuapp.com/</url>
 
 ## How to use this
@@ -27,3 +29,4 @@ Enjoy the Covid 19 Stats of India
 ### Contribution Thanks
 
 The api is provided by following URL <url>https://covid-india-cases.herokuapp.com/</url>
+
